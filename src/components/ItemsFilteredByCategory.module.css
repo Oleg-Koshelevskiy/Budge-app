@@ -1,0 +1,22 @@
+.section {
+  background-color: rgb(232, 232, 241);
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+.filteredItems {
+  list-style: none;
+  padding: 0;
+}
+.totalPrice {
+  font-size: 1.6rem;
+  color: brown;
+}
+.category {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0.5rem;
+  padding: 0 1rem;
+  background-color: rgb(193, 193, 223);
+  border-radius: 1rem;
+}

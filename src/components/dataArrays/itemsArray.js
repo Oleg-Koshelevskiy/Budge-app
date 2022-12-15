@@ -1,0 +1,58 @@
+const itemsArray = [
+  {
+    id: 1,
+    name: "хліб",
+    date: 1668022100000,
+    quantity: 2,
+    price: 15.0,
+    type: "regular",
+    category: "food",
+  },
+  {
+    id: 2,
+    name: "молоко",
+    date: 1667033200000,
+    quantity: 3,
+    price: 20.0,
+    type: "regular",
+    category: "food",
+  },
+  {
+    id: 3,
+    name: "куртка",
+    date: 1669011300000,
+    quantity: 1,
+    price: 1500.0,
+    type: "unregular",
+    category: "clothes",
+  },
+  {
+    id: 4,
+    name: "день народження друга",
+    date: 1669070400000,
+    quantity: 1,
+    price: 500.0,
+    type: "unregular",
+    category: "presents",
+  },
+  {
+    id: 5,
+    name: "спортзал",
+    date: 1669075500000,
+    quantity: 1,
+    price: 520.0,
+    type: "regular",
+    category: "sport",
+  },
+  {
+    id: 6,
+    name: "допомога армії",
+    date: 1669005600000,
+    quantity: 1,
+    price: 200.0,
+    type: "unregular",
+    category: "charity",
+  },
+];
+
+export default itemsArray;

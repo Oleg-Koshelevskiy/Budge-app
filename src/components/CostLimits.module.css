@@ -1,0 +1,47 @@
+.limits {
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 76.5rem;
+  box-sizing: border-box;
+}
+.item {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+.item > input {
+  width: 6rem;
+}
+.name {
+  width: 12rem;
+}
+.value {
+  width: 16%;
+}
+.header {
+  display: flex;
+  font-weight: 700;
+  gap: 1.5rem;
+}
+.plansum {
+  width: 6.8rem;
+}
+.avail {
+  width: 16%;
+}
+.last {
+  width: 10%;
+}
+
+.green {
+  background-color: rgba(122, 220, 122, 0.852);
+}
+.yellow {
+  background-color: rgba(224, 224, 98, 0.76);
+}
+.red {
+  background-color: rgba(215, 104, 104, 0.829);
+}

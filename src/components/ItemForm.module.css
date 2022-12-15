@@ -1,0 +1,33 @@
+.header {
+  font-size: 2rem;
+  text-align: center;
+  color: blue;
+}
+
+.form {
+  font-size: 1.6rem;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 76.5rem;
+  box-sizing: border-box;
+}
+
+.form div {
+  margin: 0.5rem;
+}
+
+.label {
+  padding: 0.6rem;
+  font-weight: 700;
+}
+
+.input__name {
+  width: 20rem;
+}
+.input__price {
+  width: 10rem;
+}
+.input__quantity {
+  width: 4rem;
+}

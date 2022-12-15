@@ -1,0 +1,16 @@
+.input {
+  margin-right: 1rem;
+  border: antiquewhite;
+  background-color: antiquewhite;
+  border-radius: 0.6rem;
+  font-size: 1.6rem;
+  padding: 0.4rem;
+  color: rgb(68, 68, 68);
+}
+.input:focus {
+  outline-color: rgb(161, 161, 254);
+  background-color: beige;
+}
+input::content {
+  font-size: 1.6rem;
+}
