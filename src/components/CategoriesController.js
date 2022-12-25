@@ -15,16 +15,14 @@ const CategoriesController = () => {
   const newExpenseItemHandler = (event) => {
     setExpenseName(event.target.value);
   };
+  const newIncomeItemHandler = (event) => {
+    setIncomeName(event.target.value);
+  };
 
   const selectedExpenseHandler = (event) => {
     console.log(event.target.value);
     setSelectedExpense(event.target.value);
   };
-
-  const newIncomeItemHandler = (event) => {
-    setIncomeName(event.target.value);
-  };
-
   const selectedIncomeHandler = (event) => {
     console.log(event.target.value);
     setSelectedIncome(event.target.value);
@@ -41,11 +39,29 @@ const CategoriesController = () => {
     setExpenseName("");
   };
 
+  const addNewIncomeItemHandler = (event) => {
+    event.preventDefault();
+    const newIncomeItem = {
+      category: incomeName,
+      categoryName: incomeName,
+    };
+    console.log(newIncomeItem);
+    context.addIncomeCategory(newIncomeItem);
+    setExpenseName("");
+  };
+
   const removeExpenseItemHandler = (event) => {
     event.preventDefault();
     if (!selectedExpense) return;
     context.removeExpenseCategory(selectedExpense);
     setSelectedExpense();
+  };
+
+  const removeIncomeItemHandler = (event) => {
+    event.preventDefault();
+    if (!selectedIncome) return;
+    context.removeIncomeCategory(selectedIncome);
+    setSelectedIncome();
   };
 
   const expenseList = context.expenseCategories.map((item) => {
@@ -95,9 +111,9 @@ const CategoriesController = () => {
           onChange={newIncomeItemHandler}
           value={incomeName}
         />
-        <Button>+</Button>
+        <Button onClick={addNewIncomeItemHandler}>+</Button>
       </form>
-      <form id="incomeForm">
+      <form onSubmit={removeIncomeItemHandler} id="incomeForm">
         <Select
           onChange={selectedIncomeHandler}
           value={selectedIncome}
@@ -106,7 +122,7 @@ const CategoriesController = () => {
           <option>--Оберіть категорію--</option>
           {incomesList}
         </Select>
-        <Button>-</Button>
+        <Button type="submit">-</Button>
       </form>
     </Card>
   );
