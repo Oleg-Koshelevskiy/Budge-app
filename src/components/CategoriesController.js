@@ -4,6 +4,7 @@ import Select from "./UI/Select";
 import Card from "./UI/Card";
 import { useContext, useState } from "react";
 import BudgetContext from "../store/budget-context";
+import styles from "./CategoriesController.module.css";
 
 const CategoriesController = () => {
   const [expenseName, setExpenseName] = useState("");
@@ -81,7 +82,7 @@ const CategoriesController = () => {
   });
 
   return (
-    <Card>
+    <Card className={styles.generalForm}>
       <form>
         <label htmlFor="newExpense">Додати категорію витрат</label>
         <Input
@@ -93,10 +94,12 @@ const CategoriesController = () => {
         <Button onClick={addNewExpenseItemHandler}>+</Button>
       </form>
       <form onSubmit={removeExpenseItemHandler} id="expenseForm">
+        <label htmlFor="removeExpense">Видалити категорію витрат</label>
         <Select
           onChange={selectedExpenseHandler}
           value={selectedExpense}
           form="expenseForm"
+          id="removeExpense"
         >
           <option>--Оберіть категорію--</option>
           {expenseList}
@@ -114,10 +117,12 @@ const CategoriesController = () => {
         <Button onClick={addNewIncomeItemHandler}>+</Button>
       </form>
       <form onSubmit={removeIncomeItemHandler} id="incomeForm">
+        <label htmlFor="removeIncome">Видалити категорію доходів</label>
         <Select
           onChange={selectedIncomeHandler}
           value={selectedIncome}
           form="incomeForm"
+          id="removeIncome"
         >
           <option>--Оберіть категорію--</option>
           {incomesList}

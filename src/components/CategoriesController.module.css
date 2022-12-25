@@ -1,0 +1,15 @@
+.generalForm {
+  padding: 1rem;
+  max-width: 76.5rem;
+  box-sizing: border-box;
+}
+
+.generalForm form {
+  margin: 1rem;
+}
+
+.generalForm form label {
+  margin-right: 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
