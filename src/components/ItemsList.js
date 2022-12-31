@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "./UI/Card";
 import styles from "./ItemsList.module.css";
-import expenseCategories from "./dataArrays/expenseCategories";
+import expenseCategories from "../dataArrays/expenseCategories";
 import ItemsFilteredByCategory from "./ItemsFilteredByCategory";
 
 const ItemsList = ({ period, filteredItemsByPeriod }) => {

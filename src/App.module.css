@@ -6,10 +6,3 @@ html {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
 }
-
-.header {
-  margin-top: 1rem;
-  font-size: 4rem;
-  text-align: center;
-  color: #4c4cc7;
-}

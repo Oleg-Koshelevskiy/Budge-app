@@ -1,0 +1,10 @@
+.topHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.logo {
+  font-size: 4rem;
+  text-align: center;
+  color: #4c4cc7;
+}

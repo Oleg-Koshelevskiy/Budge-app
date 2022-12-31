@@ -1,7 +1,7 @@
 import { useReducer } from "react";
-import expenseCategories from "../components/dataArrays/expenseCategories";
-import incomeCategories from "../components/dataArrays/incomeCategories";
-import itemsArray from "../components/dataArrays/itemsArray";
+import expenseCategories from "../dataArrays/expenseCategories";
+import incomeCategories from "../dataArrays/incomeCategories";
+import itemsArray from "../dataArrays/itemsArray";
 import BudgetContext from "./budget-context";
 
 const defaultBudgetState = {
