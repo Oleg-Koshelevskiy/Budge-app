@@ -1,10 +1,24 @@
+.header {
+  min-height: 8rem;
+  width: 100%;
+  background: #41966989;
+  background: linear-gradient(90deg, #41966989 50%, #2be8867f 100%);
+}
+
 .topHeader {
+  height: 8rem;
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
+.topHeader img {
+  width: 64px;
+  height: 64px;
+}
 .logo {
   font-size: 4rem;
   text-align: center;
-  color: #4c4cc7;
+  color: #fffac9;
+  -webkit-text-stroke: 1px #ffd910;
 }
