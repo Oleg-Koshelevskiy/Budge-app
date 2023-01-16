@@ -3,8 +3,9 @@ import Card from "./UI/Card";
 import styles from "./ItemsList.module.css";
 import expenseCategories from "../dataArrays/expenseCategories";
 import ItemsFilteredByCategory from "./ItemsFilteredByCategory";
+import Total from "./Total";
 
-const ItemsList = ({ period, filteredItemsByPeriod }) => {
+const ItemsList = ({ items, period, filteredItemsByPeriod }) => {
   const headerDate = (timestamp) => {
     const date = new Date(timestamp);
     const year = date.getFullYear();
@@ -36,7 +37,19 @@ const ItemsList = ({ period, filteredItemsByPeriod }) => {
       ) : (
         <h2>Період не задано</h2>
       )}
+      <div className={styles.header}>
+        <div className={styles.name}>Назва</div>
+        <div className={styles.date}>Дата</div>
+        <div className={styles.price}>Ціна, грн</div>
+        <div className={styles.quantity}>Кількість</div>
+        <div className={styles.cost}>Вартість</div>
+      </div>
       <ul>{categoriesFilteredList}</ul>
+      <Total
+        items={items}
+        period={period}
+        filteredItemsByPeriod={filteredItemsByPeriod}
+      />
     </Card>
   );
 };

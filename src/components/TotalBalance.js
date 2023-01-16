@@ -2,6 +2,7 @@ import { useState } from "react";
 import Button from "./UI/Button";
 import Card from "./UI/Card";
 import Input from "./UI/Input";
+import styles from "./TotalBalance.module.css";
 
 const TotalBalance = () => {
   const [balance, setBalance] = useState("");
@@ -14,7 +15,7 @@ const TotalBalance = () => {
   };
 
   return (
-    <Card>
+    <Card className={styles.total}>
       <h2>Баланс: {balance || 0} грн</h2>
       <form onSubmit={totalBalanceHandler}>
         <Input value={balance} type="number" onChange={totalBalanceHandler} />

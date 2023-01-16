@@ -4,7 +4,8 @@ import itemsArray from "../dataArrays/itemsArray";
 import ItemForm from "../components/ItemForm";
 import ItemsList from "../components/ItemsList";
 import ListType from "../components/ListType";
-import Total from "../components/Total";
+import styles from "./Main.module.css";
+import Container from "../components/UI/Container";
 
 const Main = () => {
   const [items, setItems] = useState(itemsArray);
@@ -41,26 +42,24 @@ const Main = () => {
 
   return (
     <main>
-      <ItemForm onChangeItems={itemAddHandler} />
-      <ListType getPeriod={periodHandler} />
-      <CostLimits
-        period={period}
-        filteredItemsByPeriod={filteredItemsByPeriod}
-      />
-      {items.length > 0 && (
-        <ItemsList
-          items={items}
-          period={period}
-          filteredItemsByPeriod={filteredItemsByPeriod}
-        />
-      )}
-      {items.length > 0 && (
-        <Total
-          items={items}
-          period={period}
-          filteredItemsByPeriod={filteredItemsByPeriod}
-        />
-      )}
+      <Container>
+        <div className={styles.section}>
+          <ItemForm onChangeItems={itemAddHandler} />
+          <ListType getPeriod={periodHandler} />
+
+          <CostLimits
+            period={period}
+            filteredItemsByPeriod={filteredItemsByPeriod}
+          />
+          {items.length > 0 && (
+            <ItemsList
+              items={items}
+              period={period}
+              filteredItemsByPeriod={filteredItemsByPeriod}
+            />
+          )}
+        </div>
+      </Container>
     </main>
   );
 };

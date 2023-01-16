@@ -12,22 +12,35 @@
 }
 
 .name {
-  width: 24rem;
+  width: 40%;
   font-weight: 700;
+}
+.date {
+  width: 15%;
+}
+.price {
+  width: 10%;
+  text-align: right;
+}
+.amount {
+  width: 10%;
+  text-align: right;
 }
 
 .cost {
   font-weight: 700;
+  width: 15%;
+  text-align: right;
 }
 
 @media (max-width: 500px) {
-  .item {    
+  .item {
     font-size: 1.1rem;
     align-items: center;
-    background-color: white;    
-    border-radius: 0.6rem;    
-  }  
+    background-color: white;
+    border-radius: 0.6rem;
+  }
   .name {
-    width: 12rem;    
+    width: 12rem;
   }
 }

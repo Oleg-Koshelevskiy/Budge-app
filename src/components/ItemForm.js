@@ -140,7 +140,7 @@ const ItemForm = (props) => {
   });
 
   return (
-    <Card>
+    <Card className={styles.card}>
       <h2 className={styles.header}>Додати</h2>
       <form onSubmit={sendFormHandler} className={styles.form} id="itemForm">
         <div>

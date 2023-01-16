@@ -15,14 +15,18 @@ const Header = () => {
     <header className={styles.header}>
       <Container>
         <div className={styles.topHeader}>
-          <div>
+          <div className={styles.logo}>
             <img src={pig} alt="savings pig" />
+            <h2 className={styles.logoHeader}>Бюджет</h2>
           </div>
-          <h2 className={styles.logo}>Бюджет</h2>
-          <Button>Задати план на період</Button>
-          <Button>Показати план/факт</Button>
-          <Button onClick={optionsHandler}>Налаштування</Button>
-          <Button>Увійти/вийти</Button>
+
+          <div className={styles.menu}>
+            <Button>Основні цілі</Button>
+            <Button>Дашборд</Button>
+            <Button>Планувати період</Button>
+            <Button onClick={optionsHandler}>Налаштування</Button>
+            <Button>Вийти</Button>
+          </div>
         </div>
         {showOptions && <TotalBalance />}
         {showOptions && <CategoriesController />}

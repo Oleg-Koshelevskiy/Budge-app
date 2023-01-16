@@ -10,15 +10,23 @@
   margin: auto;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .topHeader img {
   width: 64px;
   height: 64px;
 }
 .logo {
+  display: flex;
+  gap: 0.5rem;
+}
+.logoHeader {
   font-size: 4rem;
   text-align: center;
   color: #fffac9;
   -webkit-text-stroke: 1px #ffd910;
+}
+.menu {
+  display: flex;
+  gap: 0.5rem;
 }

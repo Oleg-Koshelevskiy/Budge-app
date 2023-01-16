@@ -4,8 +4,7 @@
   flex-direction: column;
   gap: 1rem;
   padding: 1rem;
-  max-width: 76.5rem;
-  box-sizing: border-box;
+  width: 70rem;
 }
 .item {
   display: flex;
